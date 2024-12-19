@@ -9,7 +9,7 @@ function searchMovie() {
       return;
     }
 
-    fetch(`http://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=3a7909a3`)
+    fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(title)}&apikey=3a7909a3`)
       .then(response => response.json())
       .then(data => {
         if (data.Response === "True") {
