@@ -1,7 +1,7 @@
 const apiKey = 'a9d1b120668643f2b67b430c110a79a5'; 
 const newsContainer = document.getElementById('news-container');
 
-fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
+fetch(`http://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
   .then(response => response.json())
   .then(data => {
     if (data.articles && data.articles.length > 0) {
@@ -24,3 +24,4 @@ fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
     console.error('Error fetching news:', error);
     newsContainer.innerHTML = '<p>Failed to fetch news articles. Please try again later.</p>';
   });
+
